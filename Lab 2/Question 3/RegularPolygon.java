@@ -62,6 +62,6 @@ public class RegularPolygon {
     }
 
     public double getArea() {
-        return (n * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / n));
+        return Math.round((n * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / n)) * 100.0) / 100.0;
     }
 }

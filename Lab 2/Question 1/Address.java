@@ -29,7 +29,11 @@ public class Address {
         return state;
     }
 
-    public int getNo_tel() {
-        return no_tel;
+    public String getNo_tel() {
+        return String.format("%010d", no_tel);
+    }
+
+    public void printAddress() {
+        System.out.println("Address: No. " + number + ", " + road + ", " + postcode + ", " + state + ".");
     }
 }
