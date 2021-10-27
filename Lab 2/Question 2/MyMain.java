@@ -10,7 +10,7 @@ public class MyMain {
         System.out.println("\n--Rectangle 2--\nWidth: " + rect2.getWidth() + "\nHeight: " + rect2.getHeight()
                 + "\nArea: " + rect2.getArea() + "\nPerimeter: " + rect2.getPerimeter());
 
-        rect1.display();
-        Rectangle.printMessage();
+        // rect1.display();
+        // Rectangle.printMessage();
     }
 }
