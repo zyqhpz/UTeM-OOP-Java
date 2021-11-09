@@ -1,6 +1,5 @@
 public class Supplier {
     private String supplierName;
-    private String supplierAddress;
     private Address address;
 
     public Supplier() {
