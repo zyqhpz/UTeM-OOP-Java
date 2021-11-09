@@ -16,5 +16,4 @@ public class MyCalculatorMain {
         System.out.println("Average value is " + calculator.getAverage(values));
         System.out.println("Sum value is " + calculator.getSum(values));
     }
-
 }

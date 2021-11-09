@@ -1,3 +1,4 @@
+import bean.*;
 
 public class MyLab2Main {
 

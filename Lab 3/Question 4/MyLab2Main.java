@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import bean.*;
-
 public class MyLab2Main {
 
         public static void main(String[] args) {
@@ -30,6 +28,7 @@ public class MyLab2Main {
                 school.setName("Sekolah Tun Tijah");
                 school.setAddress(schoolAddress);
 
+                student.setNo_ID("A12345");
                 student.setBiodata(studentBiodata);
                 student.setForm(5);
                 student.setSchool(school);

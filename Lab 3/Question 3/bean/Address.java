@@ -1,3 +1,5 @@
+package bean;
+
 public class Address {
     private int number;
     private String road;

@@ -3,5 +3,6 @@
         "Question 2",
         "Question 1",
         "Question 4"
-    ]
+    ],
+    "java.dependency.packagePresentation": "hierarchical"
 }

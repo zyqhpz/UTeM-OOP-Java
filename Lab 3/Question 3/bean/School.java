@@ -1,3 +1,5 @@
+package bean;
+
 public class School {
     private String name;
     private Address address;

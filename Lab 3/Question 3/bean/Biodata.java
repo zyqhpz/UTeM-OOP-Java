@@ -1,3 +1,5 @@
+package bean;
+
 public class Biodata {
     private String no_id;
     private String name;
