@@ -18,6 +18,6 @@ public class ConversionCalculator {
     }
 
     public double convertToChi() {
-        return value * Math.pow(10, -3) * 3;
+        return value * Math.pow(10, 3) * 3;
     }
 }
