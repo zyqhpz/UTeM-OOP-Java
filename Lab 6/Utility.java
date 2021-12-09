@@ -3,14 +3,14 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Utility {
-    private String billNo;
-    private int month;
-    private int year;
-    private String typeUtility;
-    private float amount;
-    private float payment;
-    private float balance;
-    // private ArrayList<Telephone> telephones;
+    protected String billNo;
+    protected int month;
+    protected int year;
+    protected String typeUtility;
+    protected float amount;
+    protected float payment;
+    protected float balance;
+    protected ArrayList<Telephone> telephones;
 
     public Utility() {
     }
@@ -31,13 +31,13 @@ public class Utility {
         this.typeUtility = typeUtility;
     }
 
-    // public Telephones getTelephones() {
-    // return telephones;
-    // }
+    public ArrayList<Telephone> getTelephones() {
+        return telephones;
+    }
 
-    // public void setTelephones(Telephones telephones) {
-    // this.telephones = telephones;
-    // }
+    public void setTelephones(ArrayList<Telephone> telephones) {
+        this.telephones = telephones;
+    }
 
     public int getMonth() {
         return month;
@@ -56,7 +56,6 @@ public class Utility {
     }
 
     public String getTypeUtility() {
-        // throw new UnsupportedOperationException();
         return typeUtility;
     }
 
@@ -83,11 +82,20 @@ public class Utility {
         calcPayment();
     }
 
-    private void calcPayment() throws NotEnoughAmount {
-        if (this.month <= checkCurrentMonth()) {
-            throw new NotEnoughAmount();
+    protected void calcPayment() throws NotEnoughAmount {
+        if (checkCurrentMonth() <= this.month) {
+            if (this.payment < this.amount) {
+                throw new NotEnoughAmount();
+            } else {
+                this.balance = this.payment - this.amount;
+            }
+        } else {
+            if (this.payment < this.amount) {
+                throw new NotEnoughAmount();
+            } else {
+                this.balance = this.payment - this.amount - (this.amount * 0.06f);
+            }
         }
-        balance = amount - payment;
     }
 
     public float getBalance() {
