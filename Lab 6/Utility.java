@@ -83,17 +83,17 @@ public class Utility {
     }
 
     protected void calcPayment() throws NotEnoughAmount {
-        if (checkCurrentMonth() <= this.month) {
-            if (this.payment < this.amount) {
+        if (checkCurrentMonth() <= month) {
+            if (payment < amount) {
                 throw new NotEnoughAmount();
             } else {
-                this.balance = this.payment - this.amount;
+                balance = payment - amount;
             }
         } else {
-            if (this.payment < this.amount) {
+            if (payment < amount) {
                 throw new NotEnoughAmount();
             } else {
-                this.balance = this.payment - this.amount - (this.amount * 0.06f);
+                balance = payment - amount - (amount * 0.06f);
             }
         }
     }
